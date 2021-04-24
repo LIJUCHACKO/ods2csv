@@ -47,7 +47,7 @@ func main() {
 
 			for _, cell := range row.Cells {
 
-				rowString = rowString + cell.Text + "," + cell.Value + "," + cell.Formula + "," + cell.Type + ";"
+				rowString = rowString + cell.Text + "," //cell.Type or cell.Formula or cell.Value
 			}
 
 			outputcontent = append(outputcontent, rowString)
