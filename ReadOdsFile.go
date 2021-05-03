@@ -68,6 +68,7 @@ func ReplaceHTMLSpecialEntities(input string) string {
 func ReadODSFile(odsfilename string) (Odsfile, error) {
 	var odsfileContents Odsfile
 	var DB *xmlDB.Database = new(xmlDB.Database)
+	DB.MaxNooflines = 999999
 	DB.Debug_enabled = false
 	r, err := zip.OpenReader(odsfilename)
 	if err != nil {
