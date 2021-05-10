@@ -225,7 +225,7 @@ func ReadODSFile(odsfilename string) (Odsfile, error) {
 			//fmt.Printf("\ncontent.xml loaded to xmldb\n")
 			csvSpreadSheets := []Sheet{}
 			spreadSheets, _ := xmlDB.GetNode(DB, 0, "office:body/office:spreadsheet/table:table")
-			chan1 := make(chan Result)
+			chan1 := make(chan Result, 8)
 			for _, spreadsheet := range spreadSheets {
 				go ReadSheetThread(DB, spreadsheet, chan1)
 			}
