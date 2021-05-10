@@ -8,7 +8,7 @@ import (
 
 	//"github.com/pkg/profile"
 
-	"github.com/LIJUCHACKO/ods2csv_xmlDB"
+	"github.com/LIJUCHACKO/ods2csv"
 )
 
 // writeLines writes the lines to the given file.
